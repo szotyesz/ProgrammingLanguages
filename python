@@ -1,4 +1,4 @@
----Start---
+---start---
 
 if __name__ == '__main__':
     n = int(raw_input())
@@ -11,3 +11,17 @@ if __name__ == '__main__':
     query_name = raw_input()
     print "%.2f" % round(sum(student_marks[query_name]) / len(student_marks[query_name]), 2)
     
+---start---
+    
+if __name__ == '__main__':
+    n = int(raw_input())
+    arr = map(int, raw_input().split())
+    first = -101;
+    second = -102
+    for i in arr:
+        if i > first:
+            second = first
+            first = i
+        elif i < first and i > second:
+            second = i
+    print second
